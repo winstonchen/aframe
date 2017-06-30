@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- Origin Trial Token, feature = WebVR (For Chrome M59+), origin = https://aframe.io, expires = 2017-07-28 -->
+  <meta http-equiv="origin-trial" data-feature="WebVR (For Chrome M59+)" data-expires="2017-07-28" content="ArFv1ZeTwzkhjNE00uAE+XtiQB41fwqG/TqlFMLrepd9sforQSvQE/tgfIbUMYNuNre4QR1k4/z8xp2mV3dbhwwAAABeeyJvcmlnaW4iOiJodHRwczovL2FmcmFtZS5pbzo0NDMiLCJmZWF0dXJlIjoiV2ViVlIxLjEiLCJleHBpcnkiOjE1MDEyMTcwMDIsImlzU3ViZG9tYWluIjp0cnVlfQ==">
     <meta charset="utf-8">
     <title>Raycaster</title>
     <meta name="description" content="Raycaster - A-Frame">
@@ -20,7 +22,7 @@
                              intersect-color-change></a-mixin>
         <a-mixin id="finger" geometry="primitive: box; height: 0.02; width: 0.02; depth: 0.5"
                              material="side: double"></a-mixin>
-        <a-mixin id="raycaster" raycaster="objects: [mixin~='box']"
+        <a-mixin id="raycaster" raycaster="objects: [mixin~='box']; recursive: false"
                                 raycaster-helper material="opacity: 0.8"></a-mixin>
 
         <a-mixin id="color1" material="color: #0B88A8"></a-mixin>
