@@ -32,10 +32,11 @@
   </body>
   <script>
     window.onload = function() {
+      console.log("blablabla onload finished");
       let event = document.createEvent("Event");
       event.initEvent("sketchfabreadytopresentmodel", true, true);
       window.dispatchEvent(event);
-      console.log("disptching sketchfabreadytopresentmodel test before model loads");
+      console.log("blablabla disptching sketchfabreadytopresentmodel test before model loads");
     }
   </script>
 </html>
