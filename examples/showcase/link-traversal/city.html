@@ -35,7 +35,7 @@
       console.log("blablabla onload finished");
       let event = document.createEvent("Event");
       event.initEvent("sketchfabreadytopresentmodel", true, true);
-      window.dispatchEvent(event);
+      document.dispatchEvent(event);
       console.log("blablabla disptching sketchfabreadytopresentmodel test before model loads");
     }
   </script>
