@@ -33,10 +33,22 @@
   <script>
     window.onload = function() {
       console.log("blablabla onload finished");
-      let event = document.createEvent("Event");
-      event.initEvent("sketchfabreadytopresentmodel", true, true);
-      window.dispatchEvent(event);
-      console.log("blablabla disptching sketchfabreadytopresentmodel test before model loads in window");
+      window.addEventListener("vrdisplayactivate", activate, false);
+      window.addEventListener("testevent", test, false);
+      //setTimeout( ()=> {
+        console.log("blablabla setTimeout 2000");
+        let event = document.createEvent("Event");
+        event.initEvent("sketchfabreadytopresentmodel", true, true);
+        window.dispatchEvent(event);
+        console.log("blablabla disptching sketchfabreadytopresentmodel test before model loads in window");
+
+        function activate() {
+          console.log("blablabla vrdisplayactivate fired");
+        }
+        function test() {
+          console.log("blablabla testevent fired");
+        }
+      //}, 0);  
     }
   </script>
 </html>
