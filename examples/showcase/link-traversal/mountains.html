@@ -34,8 +34,8 @@
     window.onload = function() {
       let event = document.createEvent("Event");
       event.initEvent("sketchfabreadytopresentmodel", true, true);
-      window.dispatchEvent(event);
-      console.log("disptching sketchfabreadytopresentmodel test before model loads");
+      document.dispatchEvent(event);
+      console.log("disptching sketchfabreadytopresentmodel test before model loads in document");
     }
   </script>
 </html>
